@@ -261,26 +261,113 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .reveal.in{opacity:1;transform:none}
 
 @media (max-width:900px){
-  .wrap{padding:0 24px}
-  .nav-inner{padding:14px 24px}
+  .wrap{padding:0 20px}
+  .nav-inner{padding:14px 20px}
   .nav-links{display:none}
-  .hero{padding:110px 0 60px}
-  .hero-grid{grid-template-columns:1fr;gap:40px}
-  .hero-micro{grid-template-columns:repeat(2,1fr);gap:16px 0}
-  .hero-micro > div{padding-bottom:16px;border-bottom:1px solid var(--rule-soft)}
-  .about-grid,.proj-grid{grid-template-columns:1fr;gap:40px}
+  .nav-cta{padding:8px 12px;font-size:11px}
+  .topbar-cta-group{gap:6px}
+  .section{padding:72px 0}
+
+  /* hero */
+  .hero{padding:96px 0 56px}
+  .hero::after{left:20px;right:20px}
+  .hero-kicker{font-size:9px;padding:6px 12px;margin-bottom:20px}
+  .hero-meta{flex-direction:column;gap:8px;margin-bottom:24px;font-size:10px}
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero-title{font-size:clamp(40px,11vw,60px);line-height:1.05}
+  .hero-sub{margin-top:24px;font-size:15px}
+  .hero-ctas{margin-top:28px;gap:10px}
+  .hero-ctas .btn{padding:13px 18px;font-size:13px}
+  .hero-micro{grid-template-columns:repeat(2,1fr);gap:16px 0;margin-top:48px}
+  .hero-micro > div{padding:0 16px 16px 0;border-bottom:1px solid var(--rule-soft)}
+  .hero-micro .v{font-size:20px}
+  .ticker-track{font-size:24px;gap:36px;padding:18px 0}
+
+  /* section heads */
+  .sec-label{margin-bottom:24px}
+  .sec-h{font-size:clamp(32px,8vw,44px)}
+
+  /* about */
+  .about-grid{grid-template-columns:1fr;gap:32px}
   .about-side{position:static}
-  .comp-grid{grid-template-columns:1fr}
-  .service{grid-template-columns:40px 1fr auto;gap:16px}
+  .about p{font-size:1.02rem;padding-left:14px;margin-bottom:18px}
+  .signature{font-size:36px;margin-top:24px}
+  .stat-row{grid-template-columns:1fr;margin-top:48px}
+  .stat{padding:24px 0;border-right:0;border-bottom:1px solid var(--rule-soft)}
+  .stat:last-child{border-bottom:0}
+  .stat .big{font-size:64px}
+  .stat .big sup{font-size:22px}
+  .stat .lbl{margin-top:10px}
+
+  /* companies */
+  .comp-grid{grid-template-columns:1fr;gap:16px}
+  .comp{padding:28px}
+  .comp-head{margin-bottom:24px}
+  .comp h3{font-size:38px;margin-bottom:14px}
+  .comp-desc{font-size:14px;margin-bottom:24px}
+  .comp-list li{padding:12px 0;font-size:13px}
+
+  /* pull quote */
+  .pq{padding:72px 0}
+  .pq .qmark{font-size:80px;margin-bottom:20px}
+  .pq blockquote{font-size:clamp(26px,6vw,34px);max-width:none;padding:0 8px}
+  .pq .cite{margin-top:32px;font-size:10px}
+
+  /* project */
+  .proj-grid{grid-template-columns:1fr;gap:32px;margin-top:40px}
+  .proj-visual{aspect-ratio:9/16;max-height:520px}
+  .proj-name{font-size:clamp(36px,9vw,48px)}
+  .price-block{margin-top:28px;padding:22px 0}
+  .price-block .price{font-size:56px}
+  .price-block .price sup{font-size:18px}
+  .proj-features{grid-template-columns:1fr;gap:0;margin-top:22px}
+  .proj-features li{padding:12px 0;font-size:13px}
+
+  /* services */
+  .services-list{margin-top:24px}
+  .service{grid-template-columns:40px 1fr auto;gap:14px;padding:22px 0}
   .service .s-desc{display:none}
-  .service .s-name{font-size:28px}
+  .service .s-name{font-size:22px}
+  .service .s-num{font-size:10px}
+  .service .s-arr{font-size:22px}
+  .service:hover{padding-left:8px;padding-right:0}
+
+  /* achievements */
+  .ach-grid{gap:14px;margin-top:24px}
   .ach-grid > *{grid-column:span 12 !important}
-  .contact-grid{grid-template-columns:1fr 1fr}
-  .foot-grid{grid-template-columns:1fr}
-  .foot-big{font-size:clamp(40px,11vw,72px);white-space:normal;margin-bottom:40px;line-height:1.05}
-  .hero-ctas{gap:10px}
-  .hero-ctas .btn{padding:14px 20px;font-size:13px}
-  .topbar-cta-group .nav-cta{padding:8px 12px;font-size:11px}
+  .ach-card{padding:24px;min-height:auto}
+  .ach-card h4{font-size:28px}
+  .ach-card p{font-size:13px;margin-top:12px}
+
+  /* contact */
+  .contact{padding:88px 0 72px}
+  .contact-h{font-size:clamp(40px,10vw,64px);margin-bottom:48px}
+  .contact-grid{grid-template-columns:1fr}
+  .ci{padding:22px 0;border-right:0;border-bottom:1px solid var(--rule-soft)}
+  .ci:last-child{border-bottom:0}
+  .ci .v{font-size:20px}
+  .contact .btn-primary{padding:14px 22px;font-size:13px}
+
+  /* footer */
+  .foot{padding:48px 0 24px}
+  .foot-big{font-size:clamp(40px,12vw,72px);white-space:normal;margin:0 0 32px;line-height:1.02}
+  .foot-grid{grid-template-columns:1fr;gap:24px}
+  .foot-grid a{font-size:14px}
+  .foot-base{flex-direction:column;gap:10px;text-align:center;align-items:flex-start;font-size:9px}
+
+  /* fab */
+  .fab-stack{right:14px;bottom:14px;gap:10px}
+  .fab{width:48px;height:48px}
+  .fab svg{width:22px;height:22px}
+}
+
+@media (max-width:420px){
+  .topbar-cta-group .nav-cta{padding:7px 10px;font-size:10px}
+  .brand-name{font-size:17px}
+  .hero-title{font-size:clamp(36px,11vw,52px)}
+  .stat .big{font-size:54px}
+  .comp h3{font-size:32px}
+  .proj-name{font-size:34px}
 }
 </style>
 </head>
@@ -496,10 +583,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
           <li>RERA-approved · Ready plan</li>
         </ul>
 
-        <div class="proj-ctas">
-          <a href="#contact" class="btn btn-accent">Book site visit <span class="arr">→</span></a>
-          <a href="#contact" class="btn btn-outline-light">Download brochure <span class="arr">↓</span></a>
-        </div>
       </div>
     </div>
   </div>
