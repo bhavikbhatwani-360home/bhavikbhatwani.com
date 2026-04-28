@@ -315,7 +315,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
   /* project */
   .proj-grid{grid-template-columns:1fr;gap:32px;margin-top:40px}
-  .proj-visual{aspect-ratio:9/16;max-height:520px}
+  .proj-visual{aspect-ratio:4/5}
+  .proj-visual .tag-tr{display:none}
+  .proj-visual .tag-tl{font-size:9px;letter-spacing:.18em;top:14px;left:14px;right:14px}
+  .proj-visual .tag-b{font-size:9px;left:14px;right:14px;bottom:14px}
   .proj-name{font-size:clamp(36px,9vw,48px)}
   .price-block{margin-top:28px;padding:22px 0}
   .price-block .price{font-size:56px}
@@ -349,16 +352,20 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .contact .btn-primary{padding:14px 22px;font-size:13px}
 
   /* footer */
-  .foot{padding:48px 0 24px}
+  .foot{padding:48px 0 96px}
   .foot-big{font-size:clamp(40px,12vw,72px);white-space:normal;margin:0 0 32px;line-height:1.02}
   .foot-grid{grid-template-columns:1fr;gap:24px}
   .foot-grid a{font-size:14px}
-  .foot-base{flex-direction:column;gap:10px;text-align:center;align-items:flex-start;font-size:9px}
+  .foot-base{flex-direction:column;gap:10px;text-align:left;align-items:flex-start;font-size:9px;padding-right:64px}
 
   /* fab */
-  .fab-stack{right:14px;bottom:14px;gap:10px}
-  .fab{width:48px;height:48px}
-  .fab svg{width:22px;height:22px}
+  .fab-stack{right:12px;bottom:12px;gap:10px}
+  .fab{width:46px;height:46px}
+  .fab svg{width:20px;height:20px}
+
+  /* leave room for fabs above content edges */
+  .ach{padding-right:0}
+  .ach-card{padding-right:24px}
 }
 
 @media (max-width:420px){
