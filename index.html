@@ -2,793 +2,473 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bhavik Bhatwani — Founder, Housing Baba &amp; 360 Home</title>
-<meta name="description" content="Sole-mandate specialist. From launch strategy to sold-out sites. Founder of Housing Baba & 360 Home. 1,000+ homes sold across Mumbai.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<script>document.documentElement.classList.add("js");setTimeout(function(){document.documentElement.classList.add("done")},3200)</script>
+<link rel="preload" as="image" href="assets/portrait.jpg">
+<title>Bhavik Bhatwani | Founder, Housing Baba and 360 Home</title>
+<meta name="description" content="Bhavik Bhatwani, founder of Housing Baba and 360 Home. Sole-mandate real estate partner for developers in Virar, Vasai and Naigaon. 1,000+ homes sold. Now selling Green Valley and New Star Residency.">
+<meta property="og:title" content="Bhavik Bhatwani | Founder, Housing Baba and 360 Home">
+<meta property="og:description" content="Sole-mandate partner for developers. 1,000+ homes sold. Now selling Green Valley, Virar West and New Star Residency, Vasai East.">
+<meta property="og:image" content="https://bhavikbhatwani.com/assets/portrait.jpg">
+<meta property="og:url" content="https://bhavikbhatwani.com/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1c1b19">
+<link rel="canonical" href="https://bhavikbhatwani.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+/* Layout: one dark room. Full-bleed portrait opens; after it a calm column with a wide left margin, like a private office letterhead. Projects are two tall picture cards. */
 :root{
-  --ink:#111110;
-  --ink-soft:#2a2927;
-  --cream:#f2ece0;
-  --cream-deep:#e7dfce;
-  --paper:#faf6ec;
-  --accent:oklch(0.62 0.12 55);
-  --accent-deep:oklch(0.45 0.10 50);
-  --rule:rgba(17,17,16,.18);
-  --rule-soft:rgba(17,17,16,.08);
-  --serif:'Playfair Display', 'Times New Roman', serif;
-  --sans:'Geist', system-ui, sans-serif;
-  --mono:'Geist Mono', ui-monospace, monospace;
+  --marble:#1c1b19;      /* the wall behind him */
+  --marble-2:#232220;
+  --marble-3:#2b2926;
+  --stone:#ece7de;       /* lamp-shade linen */
+  --ash:#9d978c;
+  --brass:#b9a688;       /* champagne: watch strap + lamp base, kept for lines and links */
+  --brass-soft:rgba(185,166,136,.35);
+  --line:rgba(236,231,222,.13);
+  --display:'Noto Serif Display', 'Didot', 'Bodoni 72', Georgia, serif;
+  --body:'Jost', 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  --ease:cubic-bezier(.19,1,.22,1);
+  color-scheme:dark;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased;line-height:1.65}
-body{
-  background:
-    radial-gradient(1200px 600px at 85% -10%, rgba(201,140,74,.08), transparent 60%),
-    radial-gradient(900px 500px at -10% 30%, rgba(17,17,16,.04), transparent 60%),
-    var(--paper);
-  overflow-x:hidden;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--marble);color:var(--stone);font-family:var(--body);font-weight:300;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--marble)}
+a{color:inherit}
+::selection{background:var(--stone);color:var(--marble)}
+.gutter{padding-left:max(24px, env(safe-area-inset-left,0px));padding-right:max(24px, env(safe-area-inset-right,0px))}
+.wrap{max-width:1260px;margin:0 auto}
+:focus-visible{outline:1px solid var(--brass);outline-offset:4px}
+.cap{font-family:var(--display);font-style:italic;font-weight:300;font-size:19px;line-height:1.4;letter-spacing:0;color:var(--ash)}
+
+/* nav: hides on scroll down, returns on scroll up */
+.nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;transition:transform .7s var(--ease), background .5s ease, border-color .5s ease;border-bottom:1px solid transparent}
+.nav.solid{background:rgba(28,27,25,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-color:var(--line)}
+.nav.away{transform:translateY(-110%)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:80px}
+.mono-mark{font-family:var(--display);font-weight:300;font-size:26px;letter-spacing:.04em;text-decoration:none}
+.mono-mark span{color:var(--brass);font-style:italic}
+.nav-links{display:flex;gap:40px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--ash);transition:color .3s;position:relative}
+.nav-links a:not(.talk)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--brass);transform:scaleX(0);transform-origin:right;transition:transform .6s var(--ease)}
+.nav-links a:not(.talk):hover::after{transform:scaleX(1);transform-origin:left}
+.nav-links a:hover{color:var(--stone)}
+.talk{color:var(--stone)!important;border:1px solid var(--brass-soft);padding:12px 22px;transition:border-color .3s, background .3s, color .3s}
+.talk:hover{border-color:var(--brass);background:var(--brass);color:var(--marble)!important}
+
+/* hero */
+.hero{position:relative;min-height:min(100svh, 1000px);display:flex;align-items:flex-end;overflow:hidden}
+.hero-img{position:absolute;inset:-4% 0 0;background:url(assets/portrait.jpg) 58% 22%/cover no-repeat;animation:settle 3.2s var(--ease) both;will-change:transform}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(28,27,25,.94) 0%, rgba(28,27,25,.55) 40%, rgba(28,27,25,0) 72%),linear-gradient(0deg, var(--marble) 0%, rgba(28,27,25,0) 42%)}
+@keyframes settle{from{transform:scale(1.14);filter:brightness(.3) saturate(.6)}to{transform:scale(1);filter:brightness(.92) saturate(1)}}
+.hero-copy{position:relative;z-index:2;width:100%;padding-block:150px clamp(56px, 10vh, 112px)}
+.hero .cap{color:#d6d0c5;font-size:clamp(19px, 1.6vw, 23px);display:flex;align-items:center;gap:18px;animation:fade 1.4s var(--ease) .4s both}
+.hero .cap::before{content:"";flex:none;width:48px;height:1px;background:rgba(236,231,222,.45);transform-origin:left;animation:draw 1.6s var(--ease) .3s both}
+@keyframes draw{from{transform:scaleX(0)}to{transform:none}}
+.hero h1{font-family:var(--display);font-weight:200;font-size:clamp(60px, 11vw, 178px);line-height:.92;letter-spacing:-.03em;margin:22px 0 0}
+.hero h1 .row{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .row > span{display:inline-block;animation:lineUp 1.9s var(--ease) both}
+.hero h1 .row:nth-child(1) > span{animation-delay:.55s}
+.hero h1 .row:nth-child(2) > span{animation-delay:.75s}
+@keyframes lineUp{from{transform:translateY(110%)}to{transform:none}}
+.hero h1 .row:nth-child(2){font-style:italic;font-weight:200;padding-left:.55em}
+.hero-lede{max-width:560px;margin-top:44px;animation:fade 1.8s var(--ease) 1.3s both}
+.hero-lede p{margin:0;font-size:18px;line-height:1.75}
+.hero-lede p span{color:var(--ash)}
+.hero-actions{display:flex;gap:32px;flex-wrap:wrap;margin-top:32px}
+.link{text-decoration:none;position:relative;padding-bottom:6px}
+.link::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--brass);transform-origin:left;transition:transform .7s var(--ease)}
+.link:hover::after{transform:scaleX(.35)}
+.link.quiet{color:var(--ash)}
+.link.quiet::after{background:var(--line)}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.scroll-cue{position:absolute;right:max(24px, env(safe-area-inset-right,0px));bottom:clamp(56px,10vh,112px);z-index:2;width:1px;height:72px;background:var(--line);overflow:hidden}
+.scroll-cue::after{content:"";position:absolute;left:0;top:0;width:1px;height:40%;background:var(--brass);animation:drip 2.4s var(--ease) infinite}
+@keyframes drip{from{transform:translateY(-100%)}to{transform:translateY(260%)}}
+
+/* scroll reveals: only elements below the fold get .pre, and only when scripts run */
+.rv{transition:opacity 1.6s var(--ease), transform 1.6s var(--ease)}
+.pre.rv{opacity:0;transform:translateY(18px)}
+.mask .ln{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
+.mask .ln > span{display:inline-block;transition:transform 1.6s var(--ease)}
+.mask .ln:nth-child(2) > span{transition-delay:.12s}
+.pre.mask .ln > span{transform:translateY(110%)}
+.reveal-img{clip-path:inset(0 0 0 0);transition:clip-path 2s var(--ease)}
+.reveal-img img{transition:transform 2.6s var(--ease)}
+.pre.reveal-img{clip-path:inset(100% 0 0 0)}
+.pre.reveal-img img{transform:scale(1.25)}
+
+/* sections */
+section{padding-block:clamp(96px, 13vw, 180px)}
+.split{display:grid;grid-template-columns:minmax(180px, 1fr) 3fr;gap:48px}
+.side{padding-top:14px}
+h2{font-family:var(--display);font-weight:200;font-size:clamp(40px, 5.2vw, 76px);line-height:1.04;letter-spacing:-.025em;margin:0;text-wrap:balance}
+h2 em{font-style:italic}
+
+.letter{font-family:var(--display);font-weight:300;font-size:clamp(26px, 2.9vw, 40px);line-height:1.38;letter-spacing:-.01em;max-width:25ch;margin:0}
+.letter + .letter{margin-top:.9em;color:var(--ash)}
+.words .w{transition:opacity .5s ease}
+.lit-ready .w{opacity:.22}
+.lit-ready .w.on{opacity:1}
+.facts{position:relative;display:grid;grid-template-columns:repeat(3, 1fr);margin:104px 0 0}
+.facts::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--line);transform-origin:left;transition:transform 2s var(--ease) .2s}
+.pre.facts::before{transform:scaleX(0)}
+.facts div{padding:36px 24px 0 0}
+.facts dt{font-family:var(--display);font-weight:200;font-size:clamp(56px, 7vw, 104px);line-height:1;letter-spacing:-.04em;font-variant-numeric:lining-nums tabular-nums}
+.facts dt i{font-style:normal;font-size:.5em;color:var(--brass);margin-left:6px;vertical-align:.6em}
+.facts dd{margin:14px 0 0;color:var(--ash)}
+
+/* projects: two tall picture cards, name on the picture, three numbers under it */
+.projects{background:var(--marble-2)}
+.projects .intro{display:grid;grid-template-columns:minmax(180px, 1fr) 3fr;gap:48px;align-items:start}
+.projects .intro .lede{color:var(--ash);max-width:40ch;margin:28px 0 0}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px, 3vw, 40px);margin-top:clamp(64px, 8vw, 112px)}
+.card{min-width:0}
+.card .card-offset{margin-top:0}
+.cards .card:nth-child(2){margin-top:clamp(0px, 9vw, 140px)}
+.pic{position:relative;display:block;aspect-ratio:4/5;max-width:100%;overflow:hidden;background:var(--marble-3);text-decoration:none;color:var(--stone)}
+.pic img{position:absolute;left:0;top:-9%;width:100%;height:118%;object-fit:cover;filter:saturate(.82) brightness(.86);will-change:translate}
+.pic::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(28,27,25,.35) 0%, rgba(28,27,25,0) 28%, rgba(28,27,25,0) 50%, rgba(28,27,25,.9) 100%);pointer-events:none}
+@media (hover:hover){.pic:hover img{transform:scale(1.06);transition-duration:3s}}
+.pic .where{position:absolute;top:22px;left:26px;right:26px;z-index:2;display:flex;justify-content:space-between;gap:12px;font-family:var(--body);font-style:normal;font-size:14px;letter-spacing:.02em;color:#e6e0d6}
+.pic .name{position:absolute;left:26px;right:26px;bottom:26px;z-index:2}
+.pic .name h3{font-family:var(--display);font-weight:200;font-size:clamp(44px, 4.8vw, 76px);line-height:.98;letter-spacing:-.03em;margin:0}
+.pic .name h3 em{font-style:italic}
+.pic .name p{margin:14px 0 0;color:#d8d2c7;max-width:34ch}
+.nums{display:grid;grid-template-columns:repeat(3, 1fr);border-bottom:1px solid var(--line)}
+.nums div{padding:24px 12px 22px 0;min-width:0}
+.nums div + div{padding-left:18px;border-left:1px solid var(--line)}
+.nums b{display:block;font-family:var(--display);font-weight:300;font-size:clamp(24px, 2.3vw, 34px);line-height:1.05;color:var(--stone);letter-spacing:-.02em;white-space:nowrap}
+.nums span{display:block;color:var(--ash);font-size:14px;margin-top:8px;line-height:1.4}
+.card .acts{display:flex;gap:28px;flex-wrap:wrap;margin-top:24px}
+.fine{color:var(--ash);font-size:13px;margin:16px 0 0;line-height:1.5}
+
+/* companies */
+.cos{display:grid;grid-template-columns:1fr 1fr;margin-top:80px;border-top:1px solid var(--line)}
+.co{padding:52px 52px 0 0}
+.co + .co{padding-left:52px;border-left:1px solid var(--line)}
+.co h3{font-family:var(--display);font-weight:200;font-size:clamp(38px, 3.8vw, 56px);margin:0 0 8px;letter-spacing:-.025em}
+.co .cap{margin-top:4px}
+.co p{color:var(--ash);max-width:40ch;margin:22px 0 30px}
+.co ul{list-style:none;margin:0;padding:0}
+.co li{padding:13px 0;border-top:1px solid var(--line)}
+
+/* services */
+.svc{margin-top:64px;border-top:1px solid var(--line)}
+.svc details{border-bottom:1px solid var(--line)}
+.svc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:30px 0;font-family:var(--display);font-weight:300;font-size:clamp(24px, 2.6vw, 36px);letter-spacing:-.01em;transition:color .4s, transform .7s var(--ease)}
+.svc summary::-webkit-details-marker{display:none}
+@media (hover:hover){.svc summary:hover{color:var(--brass);transform:translateX(10px)}}
+.svc summary i{flex:none;width:20px;height:20px;position:relative}
+.svc summary i::before,.svc summary i::after{content:"";position:absolute;left:0;top:50%;width:100%;height:1px;background:currentColor}
+.svc summary i::after{transform:rotate(90deg);transition:transform .7s var(--ease)}
+.svc details[open] summary i::after{transform:rotate(0)}
+.svc .body{color:var(--ash);max-width:56ch;padding:0 0 34px;animation:fade .9s var(--ease) both}
+
+/* quote */
+.quote blockquote{font-family:var(--display);font-weight:200;font-style:italic;font-size:clamp(42px, 6.4vw, 100px);line-height:1.04;letter-spacing:-.03em;margin:0;max-width:16ch}
+.quote cite{display:block;margin-top:36px}
+
+/* record */
+.rec{display:grid;grid-template-columns:repeat(2,1fr);gap:0 72px;margin-top:64px}
+.rec div{padding:34px 0;border-top:1px solid var(--line)}
+.rec h3{font-family:var(--display);font-weight:300;font-size:30px;letter-spacing:-.015em;margin:0 0 10px}
+.rec p{margin:0;color:var(--ash);max-width:44ch}
+
+/* contact */
+.contact{background:var(--marble-2)}
+.contact h2{font-size:clamp(54px, 9vw, 144px);line-height:.94;letter-spacing:-.04em}
+.reach{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:80px;padding-top:36px;border-top:1px solid var(--line)}
+.reach > div{min-width:0}
+.reach .cap{margin-bottom:10px;font-size:17px}
+.reach .v{font-family:var(--display);font-weight:300;font-size:24px;line-height:1.35;overflow-wrap:anywhere}
+footer{padding-block:40px;border-top:1px solid var(--line);color:var(--ash);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{text-decoration:none;margin-left:24px;transition:color .3s}
+footer a:hover{color:var(--brass)}
+
+.wa{position:fixed;right:calc(22px + env(safe-area-inset-right,0px));bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:55;width:56px;height:56px;border-radius:50%;background:var(--brass);display:grid;place-items:center;box-shadow:0 14px 34px -12px rgba(0,0,0,.7);transition:transform .6s var(--ease)}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:24px;height:24px;fill:var(--marble)}
+
+
+@media (max-width:860px){
+  .nav-links a:not(.talk){display:none}
+  .talk{padding:10px 16px}
+  .hero{min-height:90svh}
+  .hero-img{background-position:62% 20%}
+  .hero::after{background:linear-gradient(0deg, var(--marble) 10%, rgba(28,27,25,.62) 48%, rgba(28,27,25,.08) 82%)}
+  .hero h1 .row:nth-child(2){padding-left:.3em}
+  .hero .cap{font-size:17px;white-space:nowrap}
+  .hero .cap::before{display:none}
+  .hero{min-height:96svh}
+  .hero::after{background:linear-gradient(0deg, var(--marble) 14%, rgba(28,27,25,.72) 50%, rgba(28,27,25,.1) 80%)}
+  .scroll-cue{display:none}
+  .split{grid-template-columns:1fr;gap:20px}
+  .facts{grid-template-columns:1fr}
+  .facts div{padding:26px 0;border-bottom:1px solid var(--line)}
+  .cards,.cos,.rec,.reach,.projects .intro{grid-template-columns:1fr}
+  .projects .intro{gap:20px}
+  .cards{gap:72px}
+  .cards .card:nth-child(2){margin-top:0}
+  .nums div + div{padding-left:12px}
+  .nums b{font-size:22px}
+  .co,.co + .co{padding:36px 0 0;border-left:0}
+  .co + .co{margin-top:36px;border-top:1px solid var(--line)}
 }
-body::before{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:.35;mix-blend-mode:multiply;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.07 0 0 0 0 0.07 0 0 0 0 0.06 0 0 0 .18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-}
-a{color:inherit;text-decoration:none}
-button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-
-.wrap{max-width:1400px;margin:0 auto;padding:0 48px}
-.mono{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
-.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
-.ital{font-style:italic}
-
-/* ------------ NAV ------------ */
-.nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(10px);background:color-mix(in oklab, var(--paper) 78%, transparent);border-bottom:1px solid var(--rule-soft)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;max-width:1400px;margin:0 auto}
-.brand{display:flex;align-items:center;gap:14px}
-.brand-mark{width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--cream);display:grid;place-items:center;font-family:var(--serif);font-size:18px;font-style:italic}
-.brand-name{font-family:var(--serif);font-size:20px}
-.brand-name em{font-style:italic;color:var(--accent-deep)}
-.nav-links{display:flex;gap:28px}
-.nav-links a{font-size:13px;color:var(--ink-soft);position:relative}
-.nav-links a:hover{color:var(--ink)}
-.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1px;background:var(--ink);transition:right .3s ease}
-.nav-links a:hover::after{right:0}
-.nav-cta{padding:10px 18px;border:1px solid var(--ink);border-radius:999px;font-size:13px}
-.nav-cta:hover{background:var(--ink);color:var(--cream)}
-
-/* ------------ HERO ------------ */
-.hero{padding:140px 0 80px;position:relative}
-.hero::after{content:"";position:absolute;left:48px;right:48px;bottom:0;height:1px;background:linear-gradient(90deg, transparent, var(--rule), transparent)}
-.hero-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:64px;align-items:end}
-.hero-kicker{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border:1px solid var(--rule);border-radius:999px;background:var(--cream);margin-bottom:28px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
-.hero-kicker .kdot{width:8px;height:8px;border-radius:50%;background:#25D366;box-shadow:0 0 0 4px rgba(37,211,102,.18);animation:pulse 2s infinite}
-@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(37,211,102,.05)}}
-.hero-meta{display:flex;gap:28px;margin-bottom:32px;color:var(--ink-soft);font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
-.hero-meta span{display:flex;align-items:center;gap:8px}
-.hero-meta .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
-.hero-title{font-family:var(--serif);font-weight:400;font-size:clamp(56px, 8.6vw, 132px);line-height:1.1;letter-spacing:-.02em;text-wrap:balance}
-.hero-title .ital{color:var(--ink)}
-.hero-title .accent{color:var(--accent-deep);font-style:italic}
-.hero-title .num{font-variant-numeric:lining-nums;font-feature-settings:"ss01";letter-spacing:-.03em}
-.hero-sub{margin-top:36px;max-width:520px;font-size:17px;line-height:1.55;color:var(--ink-soft)}
-.hero-sub b{color:var(--ink);font-weight:500}
-.hero-ctas{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap}
-.btn-wa{background:#25D366;color:#0c2b14}
-.btn-wa:hover{background:#1faa53;color:#fff}
-.btn-call{background:var(--accent-deep);color:var(--cream)}
-.btn-call:hover{background:var(--ink)}
-
-.fab-stack{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;flex-direction:column;gap:12px}
-.fab{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 12px 28px -8px rgba(0,0,0,.35), 0 2px 6px rgba(0,0,0,.18);transition:transform .25s ease;position:relative}
-.fab:hover{transform:translateY(-3px) scale(1.04)}
-.fab.wa{background:#25D366}
-.fab.call{background:var(--ink)}
-.fab svg{width:26px;height:26px;fill:#fff}
-.fab .lbl{position:absolute;right:66px;top:50%;transform:translateY(-50%) translateX(8px);background:var(--ink);color:var(--cream);font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:8px 12px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:all .25s ease}
-.fab:hover .lbl{opacity:1;transform:translateY(-50%) translateX(0)}
-.fab.wa .lbl{background:#0c2b14}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-size:14px;font-weight:500;transition:transform .25s ease, background .25s ease, color .25s ease}
-.btn .arr{transition:transform .25s ease}
-.btn:hover .arr{transform:translateX(4px)}
-.btn-primary{background:var(--ink);color:var(--cream)}
-.btn-primary:hover{background:var(--accent-deep)}
-.btn-ghost{border:1px solid var(--ink);color:var(--ink)}
-.btn-ghost:hover{background:var(--ink);color:var(--cream)}
-
-.portrait::before{content:"";position:absolute;inset:0;border:1px solid rgba(242,236,224,.12);border-radius:4px;z-index:3;pointer-events:none}
-.portrait{position:relative;aspect-ratio:4/5;border-radius:4px;overflow:hidden;background:#0c0c0b;box-shadow:0 40px 80px -30px rgba(17,17,16,.45),0 0 0 1px var(--rule-soft),0 0 0 8px var(--cream),0 0 0 9px var(--rule-soft)}
-.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:contrast(1.02) saturate(.95)}
-.portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.15) 0%, transparent 25%, transparent 65%, rgba(0,0,0,.55) 100%);pointer-events:none}
-.portrait .tag{position:absolute;top:16px;left:16px;right:16px;display:flex;justify-content:space-between;color:var(--cream);font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.9;z-index:2;mix-blend-mode:difference}
-.portrait .caption{position:absolute;left:16px;right:16px;bottom:16px;color:var(--cream);font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:space-between;opacity:.9;z-index:2}
-
-.hero-micro{margin-top:80px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule);padding-top:24px;position:relative}
-.hero-micro::before{content:"";position:absolute;left:0;top:-1px;height:1px;width:80px;background:var(--accent)}
-.hero-micro > div{padding-right:24px;border-right:1px solid var(--rule-soft)}
-.hero-micro > div:last-child{border-right:0}
-.hero-micro .k{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
-.hero-micro .v{font-family:var(--serif);font-size:28px;margin-top:6px}
-
-/* ticker */
-.ticker{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin-top:80px;overflow:hidden;background:var(--cream)}
-.ticker-track{display:flex;gap:56px;padding:22px 0;animation:scroll 40s linear infinite;white-space:nowrap;font-family:var(--serif);font-size:34px;letter-spacing:-.01em}
-.ticker-track span{display:inline-flex;align-items:center;gap:56px}
-.ticker-track em{font-style:italic;color:var(--accent-deep)}
-.ticker-track .dot{width:6px;height:6px;border-radius:50%;background:var(--ink);display:inline-block}
-@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* ------------ SECTION HEADERS ------------ */
-.section{padding:120px 0;position:relative}
-.sec-label{display:flex;align-items:center;gap:14px;color:var(--ink-soft);margin-bottom:40px}
-.sec-label .bar{width:28px;height:1px;background:var(--ink)}
-.sec-label .num{font-family:var(--mono);font-size:11px;letter-spacing:.2em}
-.sec-h{font-family:var(--serif);font-size:clamp(44px,5.6vw,82px);line-height:1.1;letter-spacing:-.02em}
-.sec-h .ital{color:var(--accent-deep)}
-
-/* ------------ ABOUT ------------ */
-.about{background:var(--cream);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start}
-.about p{font-family:var(--serif);font-size:1.2rem;line-height:1.65;color:var(--ink);margin-bottom:22px;text-wrap:pretty;padding-left:20px;border-left:2px solid var(--accent-deep)}
-.about p em{color:var(--accent-deep)}
-.about-side{position:sticky;top:120px}
-.signature{font-family:var(--serif);font-style:italic;font-size:48px;line-height:1;margin-top:48px;color:var(--ink)}
-.signed{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px}
-
-.stat-row{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule);margin-top:80px}
-.stat{padding:40px 24px 8px 0;border-right:1px solid var(--rule-soft)}
-.stat:last-child{border-right:0}
-.stat .big{font-family:var(--serif);font-size:92px;line-height:.9;letter-spacing:-.03em;display:flex;align-items:baseline;gap:6px}
-.stat .big sup{font-size:32px;color:var(--accent-deep);font-style:italic;top:-.35em}
-.stat .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-top:14px}
-
-/* ------------ COMPANIES ------------ */
-.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px}
-.comp{padding:48px;border:1px solid var(--rule);border-radius:6px;background:var(--paper);position:relative;overflow:hidden;transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease}
-.comp::before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--accent);transition:width .5s ease}
-.comp:hover::before{width:100%}
-.comp:hover{transform:translateY(-6px);box-shadow:0 40px 80px -30px rgba(17,17,16,.3);border-color:var(--ink)}
-.comp.dark:hover{border-color:var(--accent)}
-.comp.dark{background:var(--ink);color:var(--cream);border-color:var(--ink)}
-.comp.dark .mono{color:color-mix(in oklab, var(--cream) 70%, transparent)}
-.comp-head{display:flex;justify-content:space-between;align-items:start;margin-bottom:40px}
-.comp-logo{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:26px;font-style:italic}
-.comp:not(.dark) .comp-logo{background:var(--ink);color:var(--cream)}
-.comp.dark .comp-logo{background:var(--accent);color:var(--ink)}
-.comp h3{font-family:var(--serif);font-size:56px;line-height:1.1;letter-spacing:-.02em;margin-bottom:18px}
-.comp h3 em{color:var(--accent-deep);font-style:italic}
-.comp.dark h3 em{color:var(--accent)}
-.comp-desc{font-size:16px;line-height:1.55;max-width:440px;margin-bottom:32px;color:color-mix(in oklab, currentColor 78%, transparent)}
-.comp-list{display:flex;flex-direction:column;gap:1px;background:var(--rule-soft);border-top:1px solid var(--rule-soft)}
-.comp.dark .comp-list{background:rgba(242,236,224,.08);border-color:rgba(242,236,224,.08)}
-.comp-list li{list-style:none;background:inherit;padding:14px 0;display:flex;justify-content:space-between;align-items:center;font-size:14px}
-.comp:not(.dark) .comp-list li{background:var(--paper)}
-.comp.dark .comp-list li{background:var(--ink)}
-.comp-list li .idx{font-family:var(--mono);font-size:10px;letter-spacing:.2em;opacity:.55}
-
-/* ------------ PROJECT ------------ */
-.project{background:var(--ink);color:var(--cream);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
-.project .sec-label{color:color-mix(in oklab, var(--cream) 70%, transparent)}
-.project .sec-label .bar{background:var(--cream)}
-.project .sec-h .ital{color:var(--accent)}
-.proj-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;margin-top:64px}
-.proj-visual{aspect-ratio:4/5;border-radius:6px;overflow:hidden;position:relative;background:#0c0c0b;border:1px solid rgba(242,236,224,.12)}
-.proj-visual video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.proj-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.25) 0%, transparent 30%, transparent 60%, rgba(0,0,0,.6) 100%);pointer-events:none;z-index:1}
-.proj-visual .tag-tl,.proj-visual .tag-tr,.proj-visual .tag-b{z-index:2;color:var(--cream)}
-.proj-visual .tag-tl{position:absolute;top:18px;left:18px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.7}
-.proj-visual .tag-tr{position:absolute;top:18px;right:18px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.7}
-.proj-visual .tag-b{position:absolute;bottom:18px;left:18px;right:18px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.6}
-.proj-name{font-family:var(--serif);font-size:clamp(48px,5vw,76px);line-height:1.1;letter-spacing:-.02em}
-.proj-name em{color:var(--accent);font-style:italic}
-.proj-loc{margin-top:16px;font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:color-mix(in oklab,var(--cream) 65%,transparent)}
-.price-block{margin-top:36px;padding:28px 0;border-top:1px solid rgba(242,236,224,.18);border-bottom:1px solid rgba(242,236,224,.18)}
-.price-block .from{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:color-mix(in oklab,var(--cream) 60%,transparent)}
-.price-block .price{font-family:var(--serif);font-size:72px;line-height:1;margin-top:6px;color:var(--accent)}
-.price-block .price sup{font-size:22px;vertical-align:top;color:var(--cream);opacity:.8;margin-right:8px}
-.proj-features{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:28px}
-.proj-features li{list-style:none;padding:16px 0;border-bottom:1px solid rgba(242,236,224,.1);font-size:14px;display:flex;gap:12px}
-.proj-features li::before{content:"→";color:var(--accent);font-weight:500}
-.proj-ctas{margin-top:36px;display:flex;gap:12px;flex-wrap:wrap}
-.btn-accent{background:var(--accent);color:var(--ink)}
-.btn-accent:hover{background:var(--cream)}
-.btn-outline-light{border:1px solid var(--cream);color:var(--cream)}
-.btn-outline-light:hover{background:var(--cream);color:var(--ink)}
-
-/* ------------ SERVICES ------------ */
-.services-list{border-top:1px solid var(--rule);margin-top:40px}
-.service{display:grid;grid-template-columns:80px 1.2fr 2fr auto;gap:40px;align-items:center;padding:36px 0;border-bottom:1px solid var(--rule-soft);cursor:pointer;transition:padding .4s ease, background .4s ease, color .4s ease;position:relative}
-.service::before{content:"";position:absolute;left:0;top:50%;width:0;height:2px;background:var(--accent);transition:width .5s ease;transform:translateY(-50%)}
-.service:hover{padding-left:32px;padding-right:24px;background:var(--cream)}
-.service:hover::before{width:16px}
-.service .s-num{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--ink-soft)}
-.service .s-name{font-family:var(--serif);font-size:40px;line-height:1.1;letter-spacing:-.01em}
-.service .s-name em{color:var(--accent-deep);font-style:italic}
-.service .s-desc{font-size:15px;line-height:1.55;color:var(--ink-soft);max-width:500px}
-.service .s-arr{font-family:var(--serif);font-size:28px;transition:transform .3s ease;color:var(--accent-deep)}
-.service:hover .s-arr{transform:translateX(8px) rotate(-12deg)}
-
-/* ------------ PULL QUOTE ------------ */
-.pq{padding:120px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--paper)}
-.pq blockquote{font-family:var(--serif);font-size:clamp(36px,4.4vw,64px);line-height:1.15;letter-spacing:-.02em;max-width:18ch;margin:0 auto;text-align:center;text-wrap:balance;color:var(--ink)}
-.pq blockquote em{font-style:italic;color:var(--accent-deep)}
-.pq .qmark{font-family:var(--serif);font-size:120px;line-height:.5;color:var(--accent);display:block;text-align:center;margin-bottom:32px;font-style:italic}
-.pq .cite{display:flex;justify-content:center;align-items:center;gap:12px;margin-top:48px;color:var(--ink-soft);font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase}
-.pq .cite .ln{width:32px;height:1px;background:var(--ink-soft)}
-
-/* ------------ ACHIEVEMENTS ------------ */
-.ach{background:var(--cream);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.ach-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;margin-top:40px}
-.ach-card{padding:36px;border:1px solid var(--rule);border-radius:6px;background:var(--paper);min-height:260px;display:flex;flex-direction:column;justify-content:space-between}
-.ach-card.a1{grid-column:span 5}
-.ach-card.a2{grid-column:span 7;background:var(--ink);color:var(--cream);border-color:var(--ink)}
-.ach-card.a3{grid-column:span 4}
-.ach-card.a4{grid-column:span 4;background:var(--accent);color:var(--ink);border-color:var(--accent)}
-.ach-card.a5{grid-column:span 4}
-.ach-card h4{font-family:var(--serif);font-size:44px;line-height:1.1;letter-spacing:-.02em}
-.ach-card h4 em{font-style:italic;color:var(--accent-deep)}
-.ach-card.a2 h4 em{color:var(--accent)}
-.ach-card.a4 h4 em{color:var(--ink)}
-.ach-card p{font-size:14px;line-height:1.55;color:color-mix(in oklab, currentColor 78%, transparent);margin-top:16px;max-width:360px}
-.ach-card .tag{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.7}
-
-/* ------------ CONTACT ------------ */
-.contact{padding:140px 0 100px}
-.contact-h{font-family:var(--serif);font-size:clamp(56px,8vw,120px);line-height:1.1;letter-spacing:-.02em;max-width:14ch;margin-bottom:80px}
-.contact-h em{color:var(--accent-deep);font-style:italic}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.ci{padding:32px 28px 32px 0;border-right:1px solid var(--rule-soft)}
-.ci:last-child{border-right:0}
-.ci .k{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:14px}
-.ci .v{font-family:var(--serif);font-size:24px;line-height:1.2}
-.ci .v a{display:inline-flex;align-items:center;gap:8px;border-bottom:1px solid var(--rule);padding-bottom:2px}
-.ci .v a:hover{border-color:var(--ink)}
-
-/* ------------ FOOTER ------------ */
-.foot{background:var(--ink);color:var(--cream);padding:80px 0 40px;position:relative;overflow:hidden}
-.foot-big{font-family:var(--serif);font-size:clamp(64px,13vw,180px);line-height:1;letter-spacing:-.04em;margin:0 0 60px;white-space:nowrap}
-.foot-big em{color:var(--accent);font-style:italic}
-.foot-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;border-top:1px solid rgba(242,236,224,.15);padding-top:32px}
-.foot-grid .k{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:color-mix(in oklab, var(--cream) 55%, transparent);margin-bottom:12px}
-.foot-grid a{display:block;padding:4px 0;font-size:15px}
-.foot-grid a:hover{color:var(--accent)}
-.foot-base{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(242,236,224,.15);margin-top:40px;padding-top:24px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:color-mix(in oklab, var(--cream) 55%, transparent)}
-
-/* reveal on scroll */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .55s ease, transform .55s ease}
-.reveal.in{opacity:1;transform:none}
-
-@media (max-width:900px){
-  .wrap{padding:0 20px}
-  .nav-inner{padding:14px 20px}
-  .nav-links{display:none}
-  .nav-cta{padding:8px 12px;font-size:11px}
-  .topbar-cta-group{gap:6px}
-  .section{padding:72px 0}
-
-  /* hero */
-  .hero{padding:96px 0 56px}
-  .hero::after{left:20px;right:20px}
-  .hero-kicker{font-size:9px;padding:6px 12px;margin-bottom:20px}
-  .hero-meta{flex-direction:column;gap:8px;margin-bottom:24px;font-size:10px}
-  .hero-grid{grid-template-columns:1fr;gap:32px}
-  .hero-title{font-size:clamp(40px,11vw,60px);line-height:1.05}
-  .hero-sub{margin-top:24px;font-size:15px}
-  .hero-ctas{margin-top:28px;gap:10px}
-  .hero-ctas .btn{padding:13px 18px;font-size:13px}
-  .hero-micro{grid-template-columns:repeat(2,1fr);gap:16px 0;margin-top:48px}
-  .hero-micro > div{padding:0 16px 16px 0;border-bottom:1px solid var(--rule-soft)}
-  .hero-micro .v{font-size:20px}
-  .ticker-track{font-size:24px;gap:36px;padding:18px 0}
-
-  /* section heads */
-  .sec-label{margin-bottom:24px}
-  .sec-h{font-size:clamp(32px,8vw,44px)}
-
-  /* about */
-  .about-grid{grid-template-columns:1fr;gap:32px}
-  .about-side{position:static}
-  .about p{font-size:1.02rem;padding-left:14px;margin-bottom:18px}
-  .signature{font-size:36px;margin-top:24px}
-  .stat-row{grid-template-columns:1fr;margin-top:48px}
-  .stat{padding:24px 0;border-right:0;border-bottom:1px solid var(--rule-soft)}
-  .stat:last-child{border-bottom:0}
-  .stat .big{font-size:64px}
-  .stat .big sup{font-size:22px}
-  .stat .lbl{margin-top:10px}
-
-  /* companies */
-  .comp-grid{grid-template-columns:1fr;gap:16px}
-  .comp{padding:28px}
-  .comp-head{margin-bottom:24px}
-  .comp h3{font-size:38px;margin-bottom:14px}
-  .comp-desc{font-size:14px;margin-bottom:24px}
-  .comp-list li{padding:12px 0;font-size:13px}
-
-  /* pull quote */
-  .pq{padding:72px 0}
-  .pq .qmark{font-size:80px;margin-bottom:20px}
-  .pq blockquote{font-size:clamp(26px,6vw,34px);max-width:none;padding:0 8px}
-  .pq .cite{margin-top:32px;font-size:10px}
-
-  /* project */
-  .proj-grid{grid-template-columns:1fr;gap:32px;margin-top:40px}
-  .proj-visual{aspect-ratio:4/5}
-  .proj-visual .tag-tr{display:none}
-  .proj-visual .tag-tl{font-size:9px;letter-spacing:.18em;top:14px;left:14px;right:14px}
-  .proj-visual .tag-b{font-size:9px;left:14px;right:14px;bottom:14px}
-  .proj-name{font-size:clamp(36px,9vw,48px)}
-  .price-block{margin-top:28px;padding:22px 0}
-  .price-block .price{font-size:56px}
-  .price-block .price sup{font-size:18px}
-  .proj-features{grid-template-columns:1fr;gap:0;margin-top:22px}
-  .proj-features li{padding:12px 0;font-size:13px}
-
-  /* services */
-  .services-list{margin-top:24px}
-  .service{grid-template-columns:40px 1fr auto;gap:14px;padding:22px 0}
-  .service .s-desc{display:none}
-  .service .s-name{font-size:22px}
-  .service .s-num{font-size:10px}
-  .service .s-arr{font-size:22px}
-  .service:hover{padding-left:8px;padding-right:0}
-
-  /* achievements */
-  .ach-grid{gap:14px;margin-top:24px}
-  .ach-grid > *{grid-column:span 12 !important}
-  .ach-card{padding:24px;min-height:auto}
-  .ach-card h4{font-size:28px}
-  .ach-card p{font-size:13px;margin-top:12px}
-
-  /* contact */
-  .contact{padding:88px 0 72px}
-  .contact-h{font-size:clamp(40px,10vw,64px);margin-bottom:48px}
-  .contact-grid{grid-template-columns:1fr}
-  .ci{padding:22px 0;border-right:0;border-bottom:1px solid var(--rule-soft)}
-  .ci:last-child{border-bottom:0}
-  .ci .v{font-size:20px}
-  .contact .btn-primary{padding:14px 22px;font-size:13px}
-
-  /* footer */
-  .foot{padding:48px 0 96px}
-  .foot-big{font-size:clamp(40px,12vw,72px);white-space:normal;margin:0 0 32px;line-height:1.02}
-  .foot-grid{grid-template-columns:1fr;gap:24px}
-  .foot-grid a{font-size:14px}
-  .foot-base{flex-direction:column;gap:10px;text-align:left;align-items:flex-start;font-size:9px;padding-right:64px}
-
-  /* fab */
-  .fab-stack{right:12px;bottom:12px;gap:10px}
-  .fab{width:46px;height:46px}
-  .fab svg{width:20px;height:20px}
-
-  /* leave room for fabs above content edges */
-  .ach{padding-right:0}
-  .ach-card{padding-right:24px}
-}
-
-@media (max-width:420px){
-  .topbar-cta-group .nav-cta{padding:7px 10px;font-size:10px}
-  .brand-name{font-size:17px}
-  .hero-title{font-size:clamp(36px,11vw,52px)}
-  .stat .big{font-size:54px}
-  .comp h3{font-size:32px}
-  .proj-name{font-size:34px}
-}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+/* text is always visible: load animation only runs when scripts run, and is cleared after 3.2 s */
+html:not(.js) *,html.done *:not(.scroll-cue){animation:none!important}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-  <div class="nav-inner">
-    <div class="brand">
-      <div class="brand-mark">B</div>
-      <div class="brand-name">Bhavik <em>Bhatwani</em></div>
-    </div>
+<nav class="nav gutter" id="nav">
+  <div class="wrap">
+    <a href="#top" class="mono-mark">B<span>B</span></a>
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="#companies">Companies</a>
-      <a href="#project">Project</a>
+      <a href="#projects">Projects</a>
       <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <div class="topbar-cta-group" style="display:flex;gap:8px;align-items:center">
-      <a href="https://wa.me/919699355031" target="_blank" rel="noopener" class="nav-cta" style="background:#25D366;color:#0c2b14;border-color:#25D366">WhatsApp ↗</a>
-      <a href="tel:+919699355031" class="nav-cta">Call ↗</a>
+      <a href="#contact" class="talk">Talk to Bhavik</a>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="wrap">
-    <div class="hero-kicker"><span class="kdot"></span> Available · Sole-mandate · 2026</div>
-    <div class="hero-meta mono">
-      <span>Based in Mumbai · Virar–Naigaon Belt</span>
-      <span>Founder · Housing Baba · 360 Home</span>
-    </div>
-
-    <div class="hero-grid">
-      <div>
-        <h1 class="hero-title reveal">
-          From selling <span class="num">1000+</span><br>
-          homes to <span class="accent">building</span><br>
-          real&nbsp;estate <span class="ital">brands.</span>
-        </h1>
-        <p class="hero-sub">
-          Sole-mandate specialist. Launch strategy to sold-out sites.
-        </p>
-        <div class="hero-ctas">
-          <a href="https://wa.me/919699355031" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp <span class="arr">↗</span></a>
-          <a href="tel:+919699355031" class="btn btn-call">Call now <span class="arr">↗</span></a>
-          <a href="#project" class="btn btn-ghost">View projects <span class="arr">→</span></a>
-        </div>
-      </div>
-
-      <div class="portrait" aria-label="Portrait of Bhavik Bhatwani">
-        <img src="assets/bhavik-portrait.png" alt="Bhavik Bhatwani — Founder of Housing Baba &amp; 360 Home">
-        <div class="tag">
-          <span>B.B. — 01</span>
-          <span>MMB / 2026</span>
-        </div>
-        <div class="caption">
-          <span>Bhavik Bhatwani · Founder</span>
-          <span>Mumbai / 2026</span>
+<header class="hero" id="top">
+  <div class="hero-img" id="heroImg" role="img" aria-label="Bhavik Bhatwani in his office"></div>
+  <div class="hero-copy gutter" id="heroCopy">
+    <div class="wrap">
+      <div class="cap">Founder of Housing Baba and 360 Home</div>
+      <h1><span class="row"><span>Bhavik</span></span><span class="row"><span>Bhatwani</span></span></h1>
+      <div class="hero-lede">
+        <p>I take residential projects on sole mandate and sell them out, from launch day to the last registration. <span>Virar, Vasai and Naigaon, Mumbai.</span></p>
+        <div class="hero-actions">
+          <a class="link" href="https://wa.me/919699355031" target="_blank" rel="noopener">WhatsApp +91 96993 55031</a>
+          <a class="link quiet" href="#projects">See the two projects</a>
         </div>
       </div>
     </div>
-
-    <div class="hero-micro">
-      <div><div class="k">Sold</div><div class="v">1,000+ homes</div></div>
-      <div><div class="k">Team</div><div class="v">20+ members</div></div>
-      <div><div class="k">Experience</div><div class="v">4+ years</div></div>
-      <div><div class="k">Discipline</div><div class="v">Sole Mandate</div></div>
-    </div>
   </div>
-
-  <!-- ticker -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span><em>Sole&nbsp;Mandate</em> <i class="dot"></i> Launch Strategy <i class="dot"></i> <em>Digital&nbsp;Marketing</em> <i class="dot"></i> Influencer Campaigns <i class="dot"></i> <em>Lead&nbsp;Generation</em> <i class="dot"></i> Site Sales <i class="dot"></i> <em>Brand&nbsp;Building</em> <i class="dot"></i></span>
-      <span><em>Sole&nbsp;Mandate</em> <i class="dot"></i> Launch Strategy <i class="dot"></i> <em>Digital&nbsp;Marketing</em> <i class="dot"></i> Influencer Campaigns <i class="dot"></i> <em>Lead&nbsp;Generation</em> <i class="dot"></i> Site Sales <i class="dot"></i> <em>Brand&nbsp;Building</em> <i class="dot"></i></span>
-    </div>
-  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
 </header>
 
-<!-- ABOUT -->
-<section id="about" class="section about">
-  <div class="wrap">
-    <div class="sec-label">
-      <div class="bar"></div>
-      <div class="num mono">01 / About</div>
-    </div>
-
-    <div class="about-grid">
-      <div class="about-side">
-        <h2 class="sec-h reveal">Built on <span class="ital">trust</span>.<br>Scaled with<br>discipline.</h2>
-        <div class="signature">— Bhavik B.</div>
-        <div class="signed">Founder · Housing Baba · 360 Home</div>
-      </div>
-
-      <div>
-        <p>Started in <em>2021</em> with one goal — sell homes, build trust.</p>
-        <p>Closed <em>1,000+ apartments</em> with a 20-member team at <em>Housing Baba</em>.</p>
-        <p>Now a <em>Sole Mandate Specialist</em> at <em>360 Home</em> — launching, marketing and selling projects end-to-end.</p>
-      </div>
-    </div>
-
-    <div class="stat-row">
-      <div class="stat">
-        <div class="big"><span class="count" data-target="1000">0</span><sup>+</sup></div>
-        <div class="lbl">Homes Sold</div>
-      </div>
-      <div class="stat">
-        <div class="big"><span class="count" data-target="20">0</span><sup>+</sup></div>
-        <div class="lbl">Team Members</div>
-      </div>
-      <div class="stat">
-        <div class="big"><span class="count" data-target="4">0</span><sup>+</sup></div>
-        <div class="lbl">Years Experience</div>
-      </div>
+<section id="about" class="gutter">
+  <div class="wrap split">
+    <div class="side cap">Since 2021</div>
+    <div>
+      <p class="letter words">I started in 2021 with one goal: sell homes and earn trust doing it.</p>
+      <p class="letter words">Since then my team at Housing Baba has closed more than a thousand apartments. Today, through 360 Home, I run entire projects for developers.</p>
+      <dl class="facts rv">
+        <div><dt><span class="count" data-to="1000">1,000</span><i>+</i></dt><dd>Homes sold</dd></div>
+        <div><dt><span class="count" data-to="20">20</span><i>+</i></dt><dd>People on the sales floor</dd></div>
+        <div><dt><span class="count" data-to="15">15</span><i>+</i></dt><dd>Developers worked with directly</dd></div>
+      </dl>
     </div>
   </div>
 </section>
 
-<!-- COMPANIES -->
-<section id="companies" class="section">
+<section id="projects" class="projects gutter">
   <div class="wrap">
-    <div class="sec-label">
-      <div class="bar"></div>
-      <div class="num mono">02 / Companies</div>
+    <div class="intro">
+      <div class="side cap">Selling now</div>
+      <div>
+        <h2 class="mask"><span class="ln"><span>Two projects,</span></span><span class="ln"><span><em>one standard.</em></span></span></h2>
+        <p class="lede rv">1 and 2 BHK apartments in Virar West and Vasai East, sold by 360 Home.</p>
+      </div>
     </div>
-    <h2 class="sec-h reveal">Two companies.<br>One <span class="ital">operating</span> system.</h2>
 
-    <div class="comp-grid">
-      <div class="comp">
-        <div class="comp-head">
-          <div class="comp-logo">H</div>
-          <div class="mono">Est. 2021 · Retail</div>
+    <div class="cards">
+      <article class="card">
+        <a class="pic reveal-img" href="https://wa.me/919699355031?text=Hi%20Bhavik%2C%20I%20want%20details%20of%20Green%20Valley%2C%20Virar%20West." target="_blank" rel="noopener">
+          <img src="assets/gv-render.jpg" alt="Green Valley tower and entrance gate, Virar West" loading="lazy" style="object-position:58% 50%">
+          <div class="where"><span>Virar West</span><span>Square Homes</span></div>
+          <div class="name"><h3>Green<br><em>Valley</em></h3><p>1 BHK apartments near Virar station, with a sky deck and 20+ amenities.</p></div>
+        </a>
+        <div class="nums rv">
+          <div><b>₹29 L</b><span>1 BHK from</span></div>
+          <div><b>406–426</b><span>sq ft carpet</span></div>
+          <div><b>5:95</b><span>Payment plan</span></div>
         </div>
-        <h3>Housing <em>Baba</em></h3>
-        <p class="comp-desc">Mumbai's ground-level sales engine. 20+ closers. Zero excuses.</p>
-        <ul class="comp-list">
-          <li><span>Retail Sales Floor</span><span class="idx">H.01</span></li>
-          <li><span>Lead Generation &amp; Closing</span><span class="idx">H.02</span></li>
-          <li><span>Virar · Naigaon · Mumbai Corridor</span><span class="idx">H.03</span></li>
-          <li><span>20+ Member Sales Team</span><span class="idx">H.04</span></li>
-        </ul>
-      </div>
+        <div class="acts rv"><a class="link" href="https://wa.me/919699355031?text=Hi%20Bhavik%2C%20I%20want%20details%20of%20Green%20Valley%2C%20Virar%20West." target="_blank" rel="noopener">Enquire on WhatsApp</a></div>
+      </article>
 
-      <div class="comp dark">
-        <div class="comp-head">
-          <div class="comp-logo">3</div>
-          <div class="mono">Sole Mandate · End-to-End</div>
+      <article class="card">
+        <a class="pic reveal-img" href="https://www.newstarresidency.in" target="_blank" rel="noopener">
+          <img src="assets/nsr-elevation.jpg" alt="New Star Residency towers, Vasai East" loading="lazy" style="object-position:34% 50%">
+          <div class="where"><span>Vasai East</span><span>New Star Builders</span></div>
+          <div class="name"><h3>New Star<br><em>Residency</em></h3><p>1 and 2 BHK apartments across four wings, with 20+ amenities.</p></div>
+        </a>
+        <div class="nums rv">
+          <div><b>₹29.99 L*</b><span>1 BHK</span></div>
+          <div><b>₹48.99 L*</b><span>2 BHK from</span></div>
+          <div><b>₹8,000*</b><span>Rent back a month</span></div>
         </div>
-        <h3>360 <em>Home</em></h3>
-        <p class="comp-desc">Full-cycle sole mandate — from launch blueprint to final registry.</p>
-        <ul class="comp-list">
-          <li><span>Digital Marketing</span><span class="idx">3.01</span></li>
-          <li><span>Influencer Marketing</span><span class="idx">3.02</span></li>
-          <li><span>Lead Generation</span><span class="idx">3.03</span></li>
-          <li><span>Site Sales Management</span><span class="idx">3.04</span></li>
-          <li><span>Branding &amp; Launch Strategy</span><span class="idx">3.05</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PULL QUOTE -->
-<section class="pq">
-  <div class="wrap">
-    <span class="qmark reveal">“</span>
-    <blockquote class="reveal">A project doesn't sell itself.<br><em>People</em> with conviction sell it.</blockquote>
-    <div class="cite reveal"><span class="ln"></span> Bhavik Bhatwani <span class="ln"></span></div>
-  </div>
-</section>
-
-<!-- PROJECT -->
-<section id="project" class="section project">
-  <div class="wrap">
-    <div class="sec-label">
-      <div class="bar"></div>
-      <div class="num mono">03 / Currently On Mandate</div>
-    </div>
-    <h2 class="sec-h reveal">Now selling:<br>Green <span class="ital">Valley</span>.</h2>
-
-    <div class="proj-grid">
-      <div class="proj-visual" aria-label="Green Valley by Square Homes — project video">
-        <video src="assets/green-valley.mp4" poster="assets/green-valley-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
-        <div class="tag-tl">GREEN VALLEY · SQ.HOMES</div>
-        <div class="tag-tr">VW / 2026</div>
-        <div class="tag-b">
-          <span>Project walk-through</span>
-          <span>VID / 01</span>
+        <div class="acts rv">
+          <a class="link" href="https://wa.me/919699355031?text=Hi%20Bhavik%2C%20I%20want%20details%20of%20New%20Star%20Residency%2C%20Vasai%20East." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+          <a class="link quiet" href="https://www.newstarresidency.in" target="_blank" rel="noopener">newstarresidency.in</a>
         </div>
+        <p class="fine rv">*Flat cost, excludes stamp duty, registration and GST. Rent back on terms shared at the site visit. MahaRERA PR1240002601690.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="gutter">
+  <div class="wrap">
+    <h2 class="mask"><span class="ln"><span>Two companies,</span></span><span class="ln"><span><em>one way of working.</em></span></span></h2>
+    <div class="cos rv">
+      <div class="co">
+        <h3>Housing Baba</h3>
+        <div class="cap">Retail sales since 2021</div>
+        <p>The ground-level sales team. Twenty closers covering the Virar, Naigaon and Mumbai corridor.</p>
+        <ul><li>Retail sales floor</li><li>Lead generation and closing</li><li>Virar, Naigaon and Mumbai</li></ul>
       </div>
-
-      <div>
-        <div class="mono" style="color:var(--accent);margin-bottom:16px">By Square Homes · Sole-Mandate 360 Home</div>
-        <h3 class="proj-name">Green <em>Valley</em><br>by Square Homes.</h3>
-        <div class="proj-loc">◎ Virar West · Mumbai</div>
-
-        <div class="price-block">
-          <div class="from">1 BHK · Starting at</div>
-          <div class="price"><sup>₹</sup>29<span style="font-size:32px;margin-left:8px;opacity:.7">Lakh</span></div>
-        </div>
-
-        <ul class="proj-features">
-          <li>406–426 sq ft carpet</li>
-          <li>20+ Amenities</li>
-          <li>Sky Deck &amp; Garden</li>
-          <li>Open-air Gym</li>
-          <li>Near Station &amp; Market</li>
-          <li>School &amp; Hospital nearby</li>
-          <li>5 : 95 Payment Plan</li>
-          <li>RERA-approved · Ready plan</li>
-        </ul>
-
+      <div class="co">
+        <h3>360 Home</h3>
+        <div class="cap">Sole mandate, end to end</div>
+        <p>One partner for the whole project: from the launch plan to the final registry.</p>
+        <ul><li>Branding and launch strategy</li><li>Digital and influencer marketing</li><li>Lead generation</li><li>Site sales management</li></ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="section">
-  <div class="wrap">
-    <div class="sec-label">
-      <div class="bar"></div>
-      <div class="num mono">04 / Services</div>
-    </div>
-    <h2 class="sec-h reveal">What I <span class="ital">handle</span><br>for developers.</h2>
-
-    <div class="services-list">
-      <div class="service">
-        <div class="s-num">S.01</div>
-        <div class="s-name">Sole Mandate <em>Project Handling</em></div>
-        <div class="s-desc">End-to-end ownership of project sales — from pre-launch strategy to the final unit booked, with full accountability.</div>
-        <div class="s-arr">→</div>
-      </div>
-      <div class="service">
-        <div class="s-num">S.02</div>
-        <div class="s-name">Real Estate <em>Marketing</em></div>
-        <div class="s-desc">Integrated digital and offline marketing — hoardings, broker networks, performance ads, CRM and everything in between.</div>
-        <div class="s-arr">→</div>
-      </div>
-      <div class="service">
-        <div class="s-num">S.03</div>
-        <div class="s-name">Influencer <em>Campaigns</em></div>
-        <div class="s-desc">Curated creator collaborations built for project trust and high-intent reach in Mumbai's real-estate audience.</div>
-        <div class="s-arr">→</div>
-      </div>
-      <div class="service">
-        <div class="s-num">S.04</div>
-        <div class="s-name">Lead Generation <em>System</em></div>
-        <div class="s-desc">A predictable, tracked funnel — from first click to site visit — engineered for cost-per-booking, not vanity metrics.</div>
-        <div class="s-arr">→</div>
-      </div>
-      <div class="service">
-        <div class="s-num">S.05</div>
-        <div class="s-name">Sales Team <em>Setup &amp; Training</em></div>
-        <div class="s-desc">Recruit, onboard and train a high-conversion on-ground team that speaks the language of your project and buyer.</div>
-        <div class="s-arr">→</div>
-      </div>
-      <div class="service">
-        <div class="s-num">S.06</div>
-        <div class="s-name">Project <em>Launch Strategy</em></div>
-        <div class="s-desc">Positioning, pricing ladders, payment plans and the full pre-launch playbook to sell out the first phase with momentum.</div>
-        <div class="s-arr">→</div>
+<section id="services" class="gutter" style="padding-top:0">
+  <div class="wrap split">
+    <div class="side cap">For developers</div>
+    <div>
+      <h2 class="mask"><span class="ln"><span>What I handle</span></span><span class="ln"><span><em>for developers.</em></span></span></h2>
+      <div class="svc rv">
+        <details open><summary>Sole mandate project handling<i></i></summary><div class="body">End-to-end ownership of project sales, from pre-launch strategy to the final unit booked, with full accountability.</div></details>
+        <details><summary>Real estate marketing<i></i></summary><div class="body">Digital and offline marketing together: hoardings, broker networks, performance ads and CRM.</div></details>
+        <details><summary>Influencer campaigns<i></i></summary><div class="body">Creator collaborations chosen for trust and high-intent reach among Mumbai home buyers.</div></details>
+        <details><summary>Lead generation system<i></i></summary><div class="body">A tracked funnel from first click to site visit, measured on cost per booking.</div></details>
+        <details><summary>Sales team setup and training<i></i></summary><div class="body">Hiring, onboarding and training an on-site team that knows your project and your buyer.</div></details>
+        <details><summary>Project launch strategy<i></i></summary><div class="body">Positioning, price ladders, payment plans and the pre-launch plan to sell out phase one.</div></details>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ACHIEVEMENTS -->
-<section id="achievements" class="section ach">
+<section class="quote gutter" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-label">
-      <div class="bar"></div>
-      <div class="num mono">05 / Achievements</div>
-    </div>
-    <h2 class="sec-h reveal">Numbers that <span class="ital">close</span>.</h2>
+    <blockquote class="words">A project doesn't sell itself. People with conviction sell it.</blockquote>
+    <cite class="cap">Bhavik Bhatwani</cite>
+  </div>
+</section>
 
-    <div class="ach-grid">
-      <div class="ach-card a1">
-        <div class="tag">01 · Volume</div>
-        <h4>1,000<em>+</em> apartments sold</h4>
-        <p>Consistent closings across four years. Virar–Naigaon to wider Mumbai.</p>
-      </div>
-      <div class="ach-card a2">
-        <div class="tag">02 · Network</div>
-        <h4>A developer network <em>built on delivery</em>.</h4>
-        <p>Direct relationships with 15+ developers. No middlemen. No delays.</p>
-      </div>
-      <div class="ach-card a3">
-        <div class="tag">03 · Trust</div>
-        <h4>Trusted by <em>buyers &amp; builders</em>.</h4>
-        <p>Honest counsel over fast commissions — the reason referrals keep coming.</p>
-      </div>
-      <div class="ach-card a4">
-        <div class="tag">04 · System</div>
-        <h4>A high-conversion <em>sales system</em>.</h4>
-        <p>Marketing, CRM and on-site sales engineered as one pipeline — measured weekly.</p>
-      </div>
-      <div class="ach-card a5">
-        <div class="tag">05 · Team</div>
-        <h4>A team of <em>20+ closers</em>.</h4>
-        <p>Trained in the Housing Baba playbook — calm on calls, sharp on-site, relentless on follow-up.</p>
-      </div>
+<section class="gutter" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="mask"><span class="ln"><span>Track record.</span></span></h2>
+    <div class="rec rv">
+      <div><h3>1,000+ apartments sold</h3><p>Steady closings for four years, from Virar–Naigaon to wider Mumbai.</p></div>
+      <div><h3>Direct developer network</h3><p>Working relationships with 15+ developers. No middlemen, no delays.</p></div>
+      <div><h3>Trusted by buyers and builders</h3><p>Honest advice over fast commission. That is why referrals keep coming.</p></div>
+      <div><h3>One sales system</h3><p>Marketing, CRM and on-site sales run as one pipeline and reviewed every week.</p></div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section contact">
+<section id="contact" class="contact gutter">
   <div class="wrap">
-    <div class="sec-label">
-      <div class="bar"></div>
-      <div class="num mono">06 / Get in touch</div>
-    </div>
-    <div class="contact-tag mono" style="margin-bottom:24px;color:var(--accent-deep)">Response within 24 hours. Always.</div>
-    <h1 class="contact-h reveal">Let's build &amp;<br>sell your next<br><span class="ital">project</span> together.</h1>
-
-    <div class="contact-grid">
-      <div class="ci">
-        <div class="k">WhatsApp</div>
-        <div class="v"><a href="https://wa.me/919699355031" target="_blank" rel="noopener">+91 96993 55031 →</a></div>
-      </div>
-      <div class="ci">
-        <div class="k">Email</div>
-        <div class="v"><a href="mailto:bhavik.bhatwani@gmail.com">bhavik.bhatwani@gmail.com</a></div>
-      </div>
-      <div class="ci">
-        <div class="k">Office</div>
-        <div class="v" style="font-size:18px;line-height:1.4">211, Parekh Commercial,<br>Near Gokul Township,<br>Virar West — 401303</div>
-      </div>
-    </div>
-
-    <div style="margin-top:48px">
-      <a href="mailto:bhavik.bhatwani@gmail.com" class="btn btn-primary">Start a conversation <span class="arr">→</span></a>
+    <h2 class="mask"><span class="ln"><span>Have a project</span></span><span class="ln"><span><em>to launch?</em></span></span></h2>
+    <div class="reach rv">
+      <div><div class="cap">WhatsApp or call</div><div class="v"><a class="link" href="https://wa.me/919699355031" target="_blank" rel="noopener">+91 96993 55031</a></div></div>
+      <div><div class="cap">Email</div><div class="v"><a class="link" href="mailto:bhavik.bhatwani@gmail.com">bhavik.bhatwani@gmail.com</a></div></div>
+      <div><div class="cap">Office</div><div class="v">211 Parekh Commercial, near Gokul Township, Virar West 401303</div></div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="foot">
+<footer class="gutter">
   <div class="wrap">
-    <div class="foot-big">Bhavik <em>Bhatwani</em></div>
-
-    <div class="foot-grid">
-      <div>
-        <div class="k">Companies</div>
-        <a href="#companies">Housing Baba ↗</a>
-        <a href="#companies">360 Home ↗</a>
-      </div>
-      <div>
-        <div class="k">Social</div>
-        <a href="https://instagram.com/housingbaba" target="_blank" rel="noopener">Instagram ↗</a>
-        <a href="https://youtube.com/@housingbaba" target="_blank" rel="noopener">YouTube ↗</a>
-        <a href="https://linkedin.com/in/bhavikbhatwani" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </div>
-      <div>
-        <div class="k">Contact</div>
-        <a href="mailto:bhavik.bhatwani@gmail.com">bhavik.bhatwani@gmail.com</a>
-        <a href="tel:+919699355031">+91 96993 55031</a>
-        <a href="https://maps.google.com/?q=211+Parekh+Commercial+Gokul+Township+Virar+West+401303" target="_blank" rel="noopener">211 Parekh Commercial, Virar W ↗</a>
-      </div>
-    </div>
-
-    <div class="foot-base">
-      <div>© 2026 Bhavik Bhatwani · All rights reserved</div>
-      <div>Crafted with precision · v.01</div>
-    </div>
+    <span>© 2026 Bhavik Bhatwani</span>
+    <span><a href="https://instagram.com/housingbaba" target="_blank" rel="noopener">Instagram</a><a href="https://youtube.com/@housingbaba" target="_blank" rel="noopener">YouTube</a><a href="https://linkedin.com/in/bhavikbhatwani" target="_blank" rel="noopener">LinkedIn</a></span>
   </div>
 </footer>
 
-<!-- floating action buttons -->
-<div class="fab-stack" aria-label="Quick contact">
-  <a class="fab wa" href="https://wa.me/919699355031" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <span class="lbl">WhatsApp · +91 96993 55031</span>
-    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-4.2 1.1 1.1-4.1-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.6 4.6-10.2 10.3-10.2s10.3 4.6 10.3 10.2-4.6 10.3-10.3 10.3zm5.6-7.7c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0c-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5s0-.4 0-.5-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.2 3 2.1 3.2 5 4.4c.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/></svg>
-  </a>
-  <a class="fab call" href="tel:+919699355031" aria-label="Call">
-    <span class="lbl">+91 96993 55031</span>
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 15.5c-1.2 0-2.5-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.7-6.5-6.5l2.2-2.2c.3-.3.4-.7.2-1-.4-1.1-.6-2.4-.6-3.6 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z"/></svg>
-  </a>
-</div>
+<a class="wa" href="https://wa.me/919699355031" target="_blank" rel="noopener" aria-label="WhatsApp Bhavik"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm5.6 15c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0c-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.800-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5s0-.4 0-.5-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.2 3 2.1 3.2 5 4.4c.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/></svg></a>
 
 <script>
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-  });
-},{threshold:0.15, rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const counters = document.querySelectorAll('.count');
-const countIO = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(!e.isIntersecting) return;
-    const el = e.target;
-    const target = +el.dataset.target;
-    const dur = 1600;
-    const start = performance.now();
-    const fmt = n => n>=1000 ? n.toLocaleString('en-IN') : n;
-    const tick = (t)=>{
-      const p = Math.min(1,(t-start)/dur);
-      const eased = 1 - Math.pow(1-p,3);
-      el.textContent = fmt(Math.round(target*eased));
-      if(p<1) requestAnimationFrame(tick);
-      else el.textContent = fmt(target);
-    };
-    requestAnimationFrame(tick);
-    countIO.unobserve(el);
+
+  // scroll reveals: hide only what starts below the fold, show it as it arrives
+  if (!reduce && 'IntersectionObserver' in window) {
+    var targets = [].slice.call(document.querySelectorAll('.rv, .mask, .reveal-img'));
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.remove('pre'); io.unobserve(e.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:.1});
+    targets.forEach(function(el){
+      if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('pre'); io.observe(el); }
+    });
+    // backup for browsers that pause the observer: anything already on screen shows
+    addEventListener('scroll', function(){
+      targets.forEach(function(el){ if (el.classList.contains('pre') && el.getBoundingClientRect().top < innerHeight * .92) el.classList.remove('pre'); });
+    }, {passive:true});
+  }
+
+  // words light up as the reader scrolls through them
+  var wordBlocks = [].slice.call(document.querySelectorAll('.words'));
+  if (!reduce) wordBlocks.forEach(function(b){
+    b.innerHTML = b.textContent.trim().split(/\s+/).map(function(w){ return '<span class="w">' + w + '</span>'; }).join(' ');
+    b.classList.add('lit-ready');
   });
-},{threshold:.4});
-counters.forEach(c=>countIO.observe(c));
+  var pics = [].slice.call(document.querySelectorAll('.pic img'));
+  function onRead(){
+    var vh = innerHeight;
+    wordBlocks.forEach(function(b){
+      var r = b.getBoundingClientRect(), ws = b.querySelectorAll('.w');
+      var p = Math.min(1, Math.max(0, (vh * .88 - r.top) / (vh * .5 + r.height * .5)));
+      var k = Math.round(p * ws.length);
+      for (var i = 0; i < ws.length; i++) ws[i].classList.toggle('on', i < k);
+    });
+    if (!reduce) pics.forEach(function(im){
+      var r = im.parentNode.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) return;
+      var c = (r.top + r.height / 2 - vh / 2) / vh;
+      im.style.translate = '0 ' + (c * -7).toFixed(2) + '%';
+    });
+  }
+  if (!reduce) { addEventListener('scroll', onRead, {passive:true}); addEventListener('resize', onRead); onRead(); }
+
+  // count-up when the facts arrive
+  if (!reduce && 'IntersectionObserver' in window) {
+    var cio = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (!e.isIntersecting) return;
+        var el = e.target, to = +el.dataset.to, t0 = performance.now();
+        (function tick(t){
+          var p = Math.min(1, Math.max(0, (t - t0) / 2000));
+          el.textContent = Math.round(to * (1 - Math.pow(1 - p, 4))).toLocaleString('en-IN');
+          if (p < 1) requestAnimationFrame(tick);
+        })(t0);
+        cio.unobserve(el);
+      });
+    }, {threshold:.6});
+    document.querySelectorAll('.count').forEach(function(c){ if (c.getBoundingClientRect().top > innerHeight) cio.observe(c); });
+  }
+
+  // nav state + hero depth
+  var nav = document.getElementById('nav'), img = document.getElementById('heroImg'), copy = document.getElementById('heroCopy'), last = 0;
+  function onScroll(){
+    var y = scrollY;
+    nav.classList.toggle('solid', y > 40);
+    nav.classList.toggle('away', y > 600 && y > last);
+    last = y;
+    if (!reduce && y < innerHeight * 1.2) {
+      img.style.translate = '0 ' + (y * .28).toFixed(1) + 'px';
+      copy.style.transform = 'translate3d(0,' + (y * .08).toFixed(1) + 'px,0)';
+    }
+  }
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+})();
 </script>
-
 </body>
 </html>
