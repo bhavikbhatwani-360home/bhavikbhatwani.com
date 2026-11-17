@@ -52,9 +52,9 @@ section{padding:clamp(72px,9vw,128px) 0}
 .hero .cta{animation:up 1.1s cubic-bezier(.2,.8,.2,1) .5s both}
 .h-photo .ph{animation:open 1.5s cubic-bezier(.7,0,.2,1) .2s both}
 .h-photo img{animation:zoom 2.4s cubic-bezier(.2,.8,.2,1) .2s both}
-@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
-@keyframes open{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
-@keyframes zoom{from{transform:scale(1.2)}to{transform:none}}
+@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes open{from{opacity:0}to{opacity:1}}
+@keyframes zoom{from{transform:scale(1.04)}to{transform:none}}
 
 .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .stats div{padding:30px 20px 28px 0}
@@ -113,7 +113,7 @@ footer a{text-decoration:none;margin-left:20px}
 .wa:hover{transform:scale(1.08)}.wa svg{width:28px;height:28px;fill:#fff}
 
 .rv{transition:opacity 1.1s cubic-bezier(.2,.8,.2,1),transform 1.1s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
-.pre.rv{opacity:0;transform:translateY(28px)}
+.pre.rv{opacity:0;transform:translateY(10px)}
 .im.rvi{clip-path:inset(0 0 0 0);transition:clip-path 1.5s cubic-bezier(.7,0,.2,1)}
 .pre.im.rvi{clip-path:inset(0 0 100% 0)}
 
@@ -174,7 +174,7 @@ footer a{text-decoration:none;margin-left:20px}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 html:not(.js) *,html.done .hero *{animation:none!important}
 
-:root{--bg:#fbfaf5;--bg2:#eef3ee;--ink:#12382b;--mut:#55685f;--acc:#12382b;--on:#fbfaf5;--hi:#b98f3a;--line:rgba(18,56,43,.15);--card:#fff;--shadow:0 20px 44px -30px rgba(18,56,43,.4);--r:16px;--br:10px;--hfont:'Marcellus',Georgia,serif;--bfont:'Mulish','Helvetica Neue',Arial,sans-serif;--hw:400;--ht:-.01em;--h1:clamp(40px,5.6vw,80px);--band:#12382b;--band-ink:#fbfaf5;--band-mut:#bfd0c7;--band-line:rgba(251,250,245,.3)}
+:root{--bg:#fbfaf5;--bg2:#eef3ee;--ink:#12382b;--mut:#55685f;--acc:#12382b;--on:#fbfaf5;--hi:#b98f3a;--line:rgba(18,56,43,.15);--card:#fff;--shadow:0 20px 44px -30px rgba(18,56,43,.4);--r:8px;--br:6px;--hfont:'Marcellus',Georgia,serif;--bfont:'Mulish','Helvetica Neue',Arial,sans-serif;--hw:400;--ht:-.01em;--h1:clamp(40px,5.6vw,80px);--band:#12382b;--band-ink:#fbfaf5;--band-mut:#bfd0c7;--band-line:rgba(251,250,245,.3)}
 .hero-in{grid-template-columns:1fr;text-align:center;gap:48px}
 .h-text{max-width:900px;margin:0 auto}.lede{margin-left:auto;margin-right:auto}.cta{justify-content:center}
 .kicker{letter-spacing:.02em}
@@ -183,7 +183,12 @@ html:not(.js) *,html.done .hero *{animation:none!important}
 .stats{position:relative;z-index:2;margin-top:-56px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:0 32px}
 .hero{padding-bottom:0}
 .steps li::before{background:var(--hi);color:#12382b}
-@media (max-width:860px){.h-photo .ph{aspect-ratio:4/4.2;border-radius:160px 160px var(--r) var(--r)}.stats{margin-top:-36px;padding:0 18px}.contact .cta{justify-content:flex-start}}</style></head>
+@media (max-width:860px){.h-photo .ph{aspect-ratio:4/4.2;border-radius:160px 160px var(--r) var(--r)}.stats{margin-top:-36px;padding:0 18px}.contact .cta{justify-content:flex-start}}
+/* founder layout: headline left, portrait right, numbers below */
+.h-photo .ph{border-radius:var(--r)!important;box-shadow:var(--shadow)}
+.hero-in{text-align:left!important}.h-text{margin:0!important}.lede{margin-left:0!important}.cta{justify-content:flex-start!important}
+@media (min-width:861px){.hero-in{grid-template-columns:6fr 5fr!important;align-items:center}.h-photo .ph{aspect-ratio:4/4.4!important}.hero{padding-bottom:56px!important}.stats{margin-top:0!important}}
+</style></head>
 <body class="j-zig h-c">
 <nav class="nav"><div class="w">
   <a class="brand" href="#top">Bhavik Bhatwani</a>
@@ -226,14 +231,14 @@ html:not(.js) *,html.done .hero *{animation:none!important}
   <h2 class="rv">Projects selling now</h2>
   <p class="sub rv">1 and 2 BHK apartments in Virar West and Vasai East.</p>
   <div class="cards">
-    <article class="pc rv">
-      <a class="im rvi" href="https://wa.me/919699355031?text=Hi%20Bhavik%2C%20I%20want%20details%20of%20Green%20Valley%2C%20Virar%20West." target="_blank" rel="noopener"><img src="assets/gv-render.jpg" alt="Green Valley, Virar West" style="object-position:55% 60%"><span class="tag">Virar West</span></a>
+    <article class="pc">
+      <a class="im" href="https://wa.me/919699355031?text=Hi%20Bhavik%2C%20I%20want%20details%20of%20Green%20Valley%2C%20Virar%20West." target="_blank" rel="noopener"><img src="assets/gv-render.jpg" alt="Green Valley, Virar West" style="object-position:55% 60%"><span class="tag">Virar West</span></a>
       <div class="bd"><h3>Green Valley</h3><p class="by">By Square Homes. 1 BHK apartments near Virar station, with 20+ amenities.</p>
         <div class="nums"><div><b>₹29 L</b><span>1 BHK from</span></div><div><b>406–426</b><span>sq ft carpet</span></div><div><b>5:95</b><span>Payment plan</span></div></div>
         <div class="acts"><a class="tl" href="https://wa.me/919699355031?text=Hi%20Bhavik%2C%20I%20want%20details%20of%20Green%20Valley%2C%20Virar%20West." target="_blank" rel="noopener">Enquire on WhatsApp</a></div></div>
     </article>
-    <article class="pc rv" style="--d:.12s">
-      <a class="im rvi" href="https://www.newstarresidency.in" target="_blank" rel="noopener"><img src="assets/nsr-elevation.jpg" alt="New Star Residency, Vasai East" style="object-position:40% 50%"><span class="tag">Vasai East</span></a>
+    <article class="pc">
+      <a class="im" href="https://www.newstarresidency.in" target="_blank" rel="noopener"><img src="assets/nsr-elevation.jpg" alt="New Star Residency, Vasai East" style="object-position:40% 50%"><span class="tag">Vasai East</span></a>
       <div class="bd"><h3>New Star Residency</h3><p class="by">By New Star Builders. 1 and 2 BHK apartments across four wings.</p>
         <div class="nums"><div><b>₹29.99 L*</b><span>1 BHK</span></div><div><b>₹48.99 L*</b><span>2 BHK from</span></div><div><b>₹8,000*</b><span>Rent back a month</span></div></div>
         <div class="acts"><a class="tl" href="https://wa.me/919699355031?text=Hi%20Bhavik%2C%20I%20want%20details%20of%20New%20Star%20Residency%2C%20Vasai%20East." target="_blank" rel="noopener">Enquire on WhatsApp</a><a class="tl q" href="https://www.newstarresidency.in" target="_blank" rel="noopener">newstarresidency.in</a></div>
@@ -246,16 +251,16 @@ html:not(.js) *,html.done .hero *{animation:none!important}
   <h2 class="rv">How I sell a project</h2>
   <p class="sub rv">For developers: one partner from launch day to the last registration.</p>
   <ol class="steps">
-    <li class="rv"><h3>Launch plan</h3><p>Positioning, price ladder and payment plans, ready before launch day.</p></li>
-    <li class="rv" style="--d:.08s"><h3>Marketing</h3><p>Digital ads, hoardings, influencers and the broker network, run as one plan.</p></li>
-    <li class="rv" style="--d:.16s"><h3>Leads</h3><p>Every lead tracked from first click to site visit, judged on cost per booking.</p></li>
-    <li class="rv" style="--d:.24s"><h3>Site sales</h3><p>A trained on-site team that knows your project and your buyer.</p></li>
-    <li class="rv" style="--d:.32s"><h3>Registration</h3><p>Follow-up on every booking until the final registry is done.</p></li>
+    <li><h3>Launch plan</h3><p>Positioning, price ladder and payment plans, ready before launch day.</p></li>
+    <li><h3>Marketing</h3><p>Digital ads, hoardings, influencers and the broker network, run as one plan.</p></li>
+    <li><h3>Leads</h3><p>Every lead tracked from first click to site visit, judged on cost per booking.</p></li>
+    <li><h3>Site sales</h3><p>A trained on-site team that knows your project and your buyer.</p></li>
+    <li><h3>Registration</h3><p>Follow-up on every booking until the final registry is done.</p></li>
   </ol>
 </div></section>
 
 <section class="quote"><div class="w">
-  <blockquote class="words">A project doesn't sell itself. People with conviction sell it.</blockquote>
+  <blockquote>A project doesn't sell itself. People with conviction sell it.</blockquote>
   <cite>Bhavik Bhatwani</cite>
 </div></section>
 
